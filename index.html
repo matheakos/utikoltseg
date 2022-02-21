@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container justify-content-center">
-        <h4>Útiköltség-elszámolás</h4>
-        <h5>Személyes adatok</h5>
+        <h3>Útiköltség-elszámolás</h3>
+        <h4>Személyes adatok</h4>
         <div class="row">
             <div class="col-4">
                 <p><label for="nev">Név:</label></p>
@@ -28,9 +28,9 @@
             <div class="col-4">
                 <p><label for="gyartmany">Gépjármű gyártmánya, típusa:</label></p>
                 <p><label for="lakcim">Üzemanyag fajtája:</label></p>
-                <p><label for="szuldatum">Fogyasztási norma:</label></p>
-                <p><label for="szuldatum">Utazás dátuma:</label></p>
-                <p><label for="szuldatum">Üzemanyag egységára:</label></p>
+                <p><label for="datum">Fogyasztási norma:</label></p>
+                <p><label for="datum">Utazás dátuma:</label></p>
+                <p><label for="datum">Üzemanyag egységára:</label></p>
             </div>
             <div class="col-8">
                 <p><input type="text" name="autoadat" id="gyartmany"></p>
@@ -53,7 +53,7 @@
                 <p><input readonly type="text" name="autoadat" id="uzamanyagar"></p>
             </div>
             <div class="col-12 text-center">
-                <p>Forrás: <a>https://nav.gov.hu/ugyfeliranytu/uzemanyag/</a></p>
+                <p>Forrás: <a href="https://nav.gov.hu/ugyfeliranytu/uzemanyag/">https://nav.gov.hu/ugyfeliranytu/uzemanyag/</a></p>
             </div>
         </div>
         <h5>A megtett út adatai</h5>
@@ -62,13 +62,16 @@
                 <p><label for="indulas">Kiindulási hely:</label></p>
                 <p><label for="erkezes">Úticél:</label></p>
                 <p><label for="koztescel">További úticél:</label></p>
-                <p><label for="kmadat">Összes megtett távolság:</label></p>
+                <p><label for="kmadat">Összes megtett távolság<br>Google Maps térkép alapján:</label></p>
             </div>
             <div class="col-8">
-                <p><input type="text" name="utadat" id="indulas"></p>
-                <p><input type="text" name="utadat" id="erkezes"></p>
-                <p><input type="date" name="utadat" id="koztescel"></p>
-                <p><input readonly type="text" name="utadat" id="kmadat"></p>
+                <p><input type="text" name="utadat" id="indulas" class="w-50"></p>
+                <p><input type="text" name="utadat" id="erkezes" class="w-50"></p>
+                <p><input type="text" name="utadat" id="koztescel" class="w-50"></p>
+                <p><input readonly type="text" name="utadat" id="kmadat" class="w-25"> km</p>
+                <input type="button" value="Ellenőrzés és számítás">
+            </div>
+            <div class="col-12 text-center">
             </div>
         </div>
         <hr>
@@ -82,11 +85,7 @@
                 <p><input readonly type="text" name="osszes" id="osszkoltseg"></p>
                 <p><input readonly type="text" name="osszes" id="amortizacio"></p>
                 <p><input readonly type="text" name="osszes" id="elszamolhato"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <button>Nyomtatás</button>
+                <input type="button" value="Nyomtatás">
             </div>
         </div>
     </div>
